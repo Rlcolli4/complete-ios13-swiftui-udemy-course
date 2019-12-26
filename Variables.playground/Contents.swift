@@ -103,3 +103,84 @@ myFavoriteThings.first
 myFavoriteThings.last
 myFavoriteThings.append("Jesus Christ")
 myFavoriteThings.count
+//Sets - similar to arrays, but does not allow for duplicate values
+var mySet: Set = [1,2,3,4,5]
+//sets are also unordered.
+//mySet[0] //does not work because it does not have an index
+mySet.first //changes evertime because they are unordered
+//sets allow you to set values without duplicating the values
+var mySet2: Set = [0,1,2,3,4,5,0,1,2,3,4,5]
+mySet.first
+//you can use set's to filter out duplate values in an array
+var myInternetArray = [1,2,3,1,2,5,6,2,1]
+var myInternetSet = Set(myInternetArray) //this takes the array and makes a set without dupe values
+//print puts items in the bottom console.
+print("myInternetArray")
+print(myInternetArray)
+print("myInternetSet")
+print(myInternetSet)
+//You can combine sets.
+var mySetA: Set = [1,2,3]
+var mySetB: Set = [3,4,5]
+var myUnionedSet: Set = mySetA.union(mySetB)
+print("mySetA")
+print(mySetA)
+print("mySetB")
+print(mySetB)
+print("myUnionedSet")
+print(myUnionedSet)
+//Dictionaries, another type of collection that allows key - value pairs
+var myFavoriteStarWarsCharacters = [1: "Quigon Jin",2: "Yoda",3: "R2D2"]
+var myFavoriteMoviesByGenren = [ // this makes a dictioary of sets
+    "Science Fiction": Set(["Star Wars", "Transformers", "Enders Game"]),
+    "Action": ["Mission Impossible", "Red", "Jack Reacher"]]
+myFavoriteStarWarsCharacters[1]
+myFavoriteMoviesByGenren["Action"]
+//You can change values ina  dictionary just as you can any variable
+myFavoriteStarWarsCharacters[1] = "Obi Won"
+//as long as you are using the right type
+//myFavoriteStarWarsCharacters[1] = 1 //won't work because the value is different the specified dict type
+//if a dictionary is a const, you cannot change the values once theybe been set.
+//let myFavoriteThings = [1: "Food", 2: "Gym", 3: Sleep]
+//myFavoriteThings[1] = "Girls" //won't work.
+//you can add dictionaries with keys by setting them
+myFavoriteStarWarsCharacters[4] = "Quigon Jin"
+print(myFavoriteStarWarsCharacters)
+//While & for loops
+var counter = 0;
+while counter < 10  {
+    counter += 1
+}
+print("Finished Counter While Loop")
+print(counter)
+var booleanSwitch = true
+while booleanSwitch {
+    if(counter == 15) {
+        booleanSwitch = false
+    }
+    counter += 1
+}
+print("Finished Boolean While Loop")
+print(counter)
+while counter != 0 {
+    counter -= 1
+}
+print("Finished Reverse Counter While Loop")
+print(counter)
+
+let fruitsILike = ["Apple", "Banana", "Oranges", "Blue Berries", "Razberries"]
+for fruit in fruitsILike {
+    print(fruit)
+}
+
+var zeroThroughTen = [1,2,3,4,5,6,7,8,9,10]
+for incrementor in 0 ... 6 {
+    print(incrementor)
+    print(zeroThroughTen[incrementor])
+}
+//if controls
+
+
+//functions
+
+//optionals
